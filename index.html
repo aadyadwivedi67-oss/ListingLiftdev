@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f7ff">
+  <title>ListingLift — Make every product shine</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="topbar">
+    <a class="brand" href="#" aria-label="ListingLift home">
+      <span class="brand-mark">↗</span>
+      <span>Listing<span class="brand-accent">Lift</span></span>
+    </a>
+    <div class="nav-note"><span class="live-dot"></span> Your tiny business, with a big voice.</div>
+    <a class="nav-cta" href="#workspace">Create a listing <span>↗</span></a>
+  </nav>
+
+  <main>
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="sparkle">✳</span> THE CREATIVE SIDEKICK FOR SMALL SHOPS</div>
+        <h1>Good products deserve<br><span class="gradient-text">great words.</span></h1>
+        <p class="hero-description">
+          Turn the details you already know into product copy people actually want to read.
+          Less blank-page panic. More time to make good stuff.
+        </p>
+        <div class="hero-points">
+          <span><b>✓</b> Product titles</span>
+          <span><b>✓</b> Descriptions</span>
+          <span><b>✓</b> Social captions</span>
+        </div>
+        <a class="hero-link" href="#workspace">Make something lovely <span>↓</span></a>
+      </div>
+
+      <div class="hero-art" aria-label="Illustration of a product listing card">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="float-chip chip-top"><span>✦</span> Better titles</div>
+
+        <div class="product-mock">
+          <div class="mock-toolbar">
+            <span></span><span></span><span></span>
+            <small>PRODUCT PREVIEW</small>
+          </div>
+          <div class="mock-photo">
+            <div class="candle">
+              <div class="flame"></div>
+              <div class="wick"></div>
+              <div class="jar">
+                <div class="jar-label">little<br><b>moments</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="mock-lines"><i></i><i></i><i></i><i></i></div>
+          <div class="mock-pill">Handmade · Thoughtful · Yours</div>
+        </div>
+
+        <div class="float-chip chip-right"><span>✧</span> Captions that click</div>
+        <div class="art-star star-one">✳</div>
+        <div class="art-star star-two">✦</div>
+      </div>
+    </section>
+
+    <section class="workspace wrap" id="workspace">
+      <div class="section-intro">
+        <div>
+          <div class="eyebrow">YOUR CREATIVE WORKSPACE</div>
+          <h2>Let's make your product shine.</h2>
+        </div>
+        <div class="local-badge"><span class="live-dot"></span> Private by design</div>
+      </div>
+
+      <div class="work-grid">
+        <section class="panel input-panel">
+          <div class="panel-heading">
+            <div class="panel-icon purple-icon">✎</div>
+            <div>
+              <h3>Product details</h3>
+              <p>Start with what makes it special.</p>
+            </div>
+          </div>
+
+          <form id="listingForm">
+            <label for="productName">What are you selling? <span>*</span></label>
+            <input id="productName" type="text" placeholder="e.g. Handmade lavender candles" required>
+
+            <label for="category">Choose a category <span>*</span></label>
+            <div class="select-wrap">
+              <select id="category" required>
+                <option value="">Select a category</option>
+                <option>Fashion & Clothing</option>
+                <option>Beauty & Skincare</option>
+                <option>Home & Decor</option>
+                <option>Food & Handmade Treats</option>
+                <option>Accessories & Jewellery</option>
+                <option>Art & Stationery</option>
+                <option>Other</option>
+              </select>
+              <span class="select-arrow">⌄</span>
+            </div>
+
+            <label for="features">What makes it special? <span>*</span></label>
+            <textarea id="features" rows="4" placeholder="Natural soy wax, lavender scent, reusable glass jar..." required></textarea>
+            <div class="field-hint">Tip: separate features with commas.</div>
+
+            <label for="tone">Pick your brand's vibe</label>
+            <div class="tone-options">
+              <label class="tone-option"><input type="radio" name="tone" value="Friendly" checked><span>☀</span> Warm</label>
+              <label class="tone-option"><input type="radio" name="tone" value="Playful"><span>✳</span> Playful</label>
+              <label class="tone-option"><input type="radio" name="tone" value="Professional"><span>◈</span> Polished</label>
+              <label class="tone-option"><input type="radio" name="tone" value="Luxury"><span>✧</span> Luxe</label>
+            </div>
+
+            <button class="generate-btn" type="submit">
+              <span>✦</span> Generate my listing <b>↗</b>
+            </button>
+            <div class="form-foot"><span>♧</span> No account needed. Your details stay in this browser.</div>
+          </form>
+        </section>
+
+        <section class="panel output-panel">
+          <div class="output-head">
+            <div class="panel-heading">
+              <div class="panel-icon mint-icon">✦</div>
+              <div>
+                <h3>Your listing studio</h3>
+                <p>Ready-to-edit ideas for your next product page.</p>
+              </div>
+            </div>
+            <div class="status" id="status"><span class="status-dot"></span> Waiting for details</div>
+          </div>
+
+          <div class="empty-state" id="emptyState">
+            <div class="empty-illustration">
+              <div class="paper"><span>✦</span><i></i><i></i><i></i></div>
+              <div class="mini-spark">✧</div>
+            </div>
+            <h3>Your next favourite listing starts here.</h3>
+            <p>Add a few product details and we'll help you find the words.</p>
+            <div class="empty-tags">
+              <span>Title ideas</span>
+              <span>Product story</span>
+              <span>Social post</span>
+            </div>
+          </div>
+
+          <div id="results" class="results hidden">
+            <article class="result-card title-card">
+              <div class="result-card-head">
+                <div class="result-label"><span class="result-icon">Aa</span><span>PRODUCT TITLE</span></div>
+                <button class="copy-btn" data-copy="outputTitle">▢ Copy</button>
+              </div>
+              <p id="outputTitle" class="output-title"></p>
+            </article>
+
+            <article class="result-card description-card">
+              <div class="result-card-head">
+                <div class="result-label"><span class="result-icon">≡</span><span>PRODUCT DESCRIPTION</span></div>
+                <button class="copy-btn" data-copy="outputDescription">▢ Copy</button>
+              </div>
+              <p id="outputDescription"></p>
+            </article>
+
+            <article class="result-card caption-card">
+              <div class="result-card-head">
+                <div class="result-label"><span class="result-icon">♡</span><span>SOCIAL CAPTION</span></div>
+                <button class="copy-btn" data-copy="outputCaption">▢ Copy</button>
+              </div>
+              <p id="outputCaption"></p>
+            </article>
+
+            <div class="result-actions">
+              <button id="regenerateBtn" class="regenerate-btn">↻ Try another version</button>
+              <span>Make it yours — edit before you post.</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="value-row wrap">
+      <div class="value-item">
+        <div class="value-icon shield">◇</div>
+        <div><h4>Your ideas stay yours.</h4><p>This demo runs in your browser. No account or upload.</p></div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon bolt">ϟ</div>
+        <div><h4>From details to done.</h4><p>Get a useful first draft without starting from scratch.</p></div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon leaf">❋</div>
+        <div><h4>Built for the little guys.</h4><p>A friendly tool for makers, side hustlers, and tiny shops.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#">
+      <span class="brand-mark">↗</span>
+      <span>Listing<span class="brand-accent">Lift</span></span>
+    </a>
+    <span class="footer-tagline">Your products. Better words.</span>
+    <span class="footer-note">Made with care for small businesses <span>♥</span></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
